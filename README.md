@@ -1,8 +1,8 @@
 ### Data Science Workshop
 
-Este repo contiene el material para las sesiones del Workshop de Data Science en la Universidad de Montevideo:
+Este repo contiene el material para las sesiones del Workshop de Data Science en la Universidad de Montevideo (noviembre de 2020):
 
-* House sales in King County: `king.pdf`, `king.csv`, `king.py`
+* **House sales in King County**: `king.pdf`, `king.csv`, `king.py`
 
 * Predicting medical expenses: `medical.pdf`, `medical.csv`, `medical.py`
 
