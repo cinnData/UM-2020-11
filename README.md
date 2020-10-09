@@ -10,3 +10,6 @@
 
 * Predicting medical expenses: `medical.pdf`, `medical.csv`, `medical.py`
 
+* Modeling loan acceptance: `loan.pdf`, `loan.csv`, `loan.py`
+
+
