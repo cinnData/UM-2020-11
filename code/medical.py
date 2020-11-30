@@ -46,12 +46,9 @@ plt.show()
 
 # Q3. We expect old age, smoking, and obesity tend to be linked to additional health issues, while additional family member dependents may result in an increase in physician visits and preventive care such as vaccinations and yearly physical exams. Is this what you find with your model? How would you modify your equation to cope better with these patterns?
 linreg.coef_
-df['bmi_smoker'] = (df['smoker'] == 'yes')*df['bmi']
-df['age_smoker'] = (df['smoker'] == 'yes')*df['age']
-df['age2'] = df['age']**2
 X3 = pd.DataFrame({'age2': df['age']**2,
   'age_smoker': (df['smoker'] == 'yes')*df['age'],
-  'bmi_smoker': (df['smoker'] == 'yes')*df['age']})
+  'bmi_smoker': (df['smoker'] == 'yes')*df['bmi']})
 X = pd.concat([X, X3], axis=1)
 linreg.fit(X, y)
 round(linreg.score(X, y), 3)
