@@ -67,13 +67,14 @@ fp = sum((y == 0) & (y_pred == 1))/sum(y == 0)
 round(tp, 3), round(fp, 3)
 
 # Q4. Additional customers #
-48*1000*success*tp - 2*1000*(1-success)*fp
+a = sum((y == 1) & (y_pred == 1))/sum(y_pred == 1)
+1000*a*48 - 1000*(1-a)*2
 
 # Q5. Optimal cutoff #
 def profit(cutoff):
     y_pred = (scores > cutoff).astype('int')
     pd.crosstab(y, y_pred)
-    tp = sum((y == 1) & (y_pred == 1))/sum(y == 1)
-    fp = sum((y == 0) & (y_pred == 1))/sum(y == 0)
-    profit = 48*1000*success*tp - 2*1000*(1-success)*fp
+    a = sum((y == 1) & (y_pred == 1))/sum(y_pred == 1)
+    profit = 1000*a*48 - 1000*(1-a)*2
     return profit
+
