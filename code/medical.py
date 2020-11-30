@@ -97,3 +97,9 @@ X_train, X_test, y_train, y_test = \
 treereg.fit(X_train, y_train)
 round(treereg.score(X_train, y_train), 3)
 round(treereg.score(X_test, y_test), 3)
+
+# Saving your model to a pkl file #
+from joblib import *
+dump(treereg, 'treereg.pkl')
+newtreereg = load('treereg.pkl')
+round(newtreereg.score(X_train, y_train), 3)
